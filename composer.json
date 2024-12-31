@@ -1,0 +1,19 @@
+{
+    "name": "guilherme.muller2/criando-um-mvc",
+    "autoload": {
+        "psr-4": {
+            "GuilhermeMuller2\\CriandoUmMvc\\": "src/",
+            "app\\":"app/"
+        },
+        "files": [
+            "app/helpers/exception.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "PortadordeCNPJ",
+            "email": "guilhermedesouzamuller@gmail.com"
+        }
+    ],
+    "require": {}
+}
