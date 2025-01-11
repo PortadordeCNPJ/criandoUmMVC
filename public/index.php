@@ -11,5 +11,14 @@ require "../vendor/autoload.php";
 
 $app = new AppExtract;
 $controller = $app->controller();
+$method = $app->method();
+$params = $app->params();
 
-var_dump($controller);
+$controller = new $controller;
+$controller->$method($params);
+
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    extract($controller->data);
+    require "../app/views/index.php";
+}
+// var_dump($params);
