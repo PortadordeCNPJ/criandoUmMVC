@@ -16,5 +16,7 @@
             "email": "guilhermedesouzamuller@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "filp/whoops": "^2.16"
+    }
 }
