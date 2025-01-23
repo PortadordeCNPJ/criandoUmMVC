@@ -3,13 +3,13 @@
 namespace app\core;
 
 use Exception;
-use app\interfaces\ControllerInterface;
+use app\interfaces\AppInterface;
 
 class MyApp
 {
     private $controller;
 
-    public function __construct(private ControllerInterface $controllerInterface) {}
+    public function __construct(private AppInterface $controllerInterface) {}
 
     public function controller()
     {
