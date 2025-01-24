@@ -2,7 +2,7 @@
 
 <form action="/login/store" method="post">
     <input type="text" name="email" placeholer="Seu email." value="john.doe@example.com">
-    <input type="password" name="password" placeholer="Seu senha." value="123">
+    <input type="password" name="password" placeholer="Sua senha." value="123">
     <button type="submit">Logar</button>
 </form>
 

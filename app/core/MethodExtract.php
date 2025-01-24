@@ -24,7 +24,8 @@ class MethodExtract
             $sliceIndexStartFrom = 1;
         }
         return [
-            $method, $sliceIndexStartFrom
+            $method,
+            $sliceIndexStartFrom
         ];
     }
 }

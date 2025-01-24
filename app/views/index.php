@@ -23,7 +23,7 @@
             </ul>
 
             <div>
-                Bem vindo, visitante!
+                <?php echo welcome('user');?>
             </div>
         </section>
 
