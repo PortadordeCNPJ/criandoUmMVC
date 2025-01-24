@@ -12,6 +12,14 @@ class Block
 
         [$actualMethod] = MethodExtract::extract($controllerInterface);
 
-        var_dump($actualMethod);
+        $blockMethod = false;
+
+        foreach ($methods as $method) {
+            if(in_array($method, $blockMethods) and $method === $actualMethod){
+                $blockMethod = true;
+            }
+
+            return $blockMethod;
+        }
      }
 }
