@@ -19,7 +19,7 @@ class Block
                 $blockMethod = true;
             }
 
-            return $blockMethod;
         }
+        return $blockMethod;
      }
 }

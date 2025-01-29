@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\User;
 use app\classes\Flash;
 use app\core\MethodExtract;
+use app\classes\BlockNoReason;
 use app\classes\BlockNotLogged;
 use app\models\activerecord\FindBY;
 use app\interfaces\ControllerInterface;
@@ -16,7 +17,7 @@ class Login implements ControllerInterface
 
     public function __construct()
     {
-        BlockNotLogged::block($this, ['store', 'index']);
+        BlockNoReason::block($this, ['store']);
     }
 
     public function index(array $args)
