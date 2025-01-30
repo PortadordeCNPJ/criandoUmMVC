@@ -11,6 +11,7 @@ class BlockNoReason
         $canBlockMethod = Block::getMethodToBlock($controllerInterface, $blockMethods);
 
         if ($canBlockMethod) {
+            BlockPostRequest::block();
             return redirect('/');
         }
     }
