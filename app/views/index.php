@@ -18,7 +18,7 @@
         <section id="header">
             <ul id="nav">
                 <li><a href="/">Início</a></li>
-                <li><a href="/singup">SingUp</a></li>
+                <li><a href="/signup">SingUp</a></li>
                 <li><a href="/login">Login</a></li>
             </ul>
 
