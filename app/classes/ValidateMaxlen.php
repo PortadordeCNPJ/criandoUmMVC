@@ -7,6 +7,12 @@ use app\interfaces\ValidateInterface;
 class ValidateMaxlen implements ValidateInterface
 { 
     public function handle($field, $param){
-        return "ola";
+        $string = filter_input(INPUT_POST,$field, FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if (strlen($string) > $param) {
+            Flash::set($field, "O campo não pode ter mais que {$param} caracteres");
+            return false;
+        }
+        return $string;
     }
 }

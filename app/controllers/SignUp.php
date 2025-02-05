@@ -23,12 +23,15 @@ class SignUp
         $validate->handle([
             'firstName' => [REQUIRED],
             'lastName' => [REQUIRED],
-            'email' => [REQUIRED, EMAIL],
-            'password' => [REQUIRED, MAXLEN.':10'],
+            'email' => [REQUIRED,EMAIL],
+            'password' => [REQUIRED,MAXLEN.':10'],
         ]);
 
-        // if($validate->erros){
+        if($validate->erros){
+            return redirect('/signup');
+        }
 
-        // }
+        var_dump($validate->data);
+        die();
     }
 }
