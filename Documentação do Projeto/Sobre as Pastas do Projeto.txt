@@ -1,0 +1,18 @@
+O projeto tem por finalidade fins edecutivos!
+
+1- A pasta "app" na raiz do projeto, serve para armazenar toda a estrutura funcional do código. Dentro dela a várias pastas, cada uma com sua finalidade.
+
+2- Pasta "classes", nela estão os arquivos que fazem validações, bloqueios de página e de mais funcionalidades. Contém arquivos de classes que podem ser usados por todo o código,
+dependendo apenas da necessidade.
+
+3- Pasta "controllers", a função dos controllers é cuidar da parte lógica por trás das views. Como fazer tratamento de dados, criar novas views ou receber tabelas do banco de dados.
+
+4- A pasta "core", nessa pasta existem os arquivos responsáveis por trabalhar e tratar as informação da URL. Fazendo o tratamento na hora de pegar o que é "controller",
+os métodos que esse controller possuí e os parametros caso sejam necessários serem passados.
+
+5- Dentro da pasta "helpers" estão as funções que podem facilitar o uso dentro do código, são usados quase sempre dentro das views.
+
+6- A pasta de "interfaces" é usada principalmente por conta do polimorfismo presente no código, quando algumas classes precisam instanciar alguns arquivos extendidos pelas interfaces.
+
+7- Dentro da pasta "models", possuí a pasta "activerecord", os arquivos dentro dela são usados para fazer a conexão com o banco de dados, criação de querys e de métodos que
+podem receber as tabelas de um banco de dados.
