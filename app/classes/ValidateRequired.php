@@ -14,6 +14,8 @@ class ValidateRequired implements ValidateInterface
             Flash::set($field, 'O campo é obrigatório');
             return false;
         }
+
+        Old::set($field, $string);
         return $string;
     }
 }

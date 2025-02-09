@@ -13,6 +13,8 @@ class ValidateMaxlen implements ValidateInterface
             Flash::set($field, "O campo não pode ter mais que {$param} caracteres");
             return false;
         }
+        
+        Old::set($field, $string);
         return $string;
     }
 }

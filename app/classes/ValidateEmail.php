@@ -15,6 +15,10 @@ class ValidateEmail implements ValidateInterface
             return false;
         }
 
-        return filter_input(INPUT_POST,$field, FILTER_VALIDATE_EMAIL);
+        $string =  filter_input(INPUT_POST,$field, FILTER_VALIDATE_EMAIL);
+
+        Old::set($field, $string);
+
+        return $string;
     }
 }
