@@ -6,8 +6,6 @@ use ReflectionClass;
 use app\interfaces\ActiveRecordInterface;
 use app\interfaces\ActiveRecordExecuteInterface;
 
-
-
 //Não é possível instanciar essa classe em lugar nenhum, pois ela é abstrata
 abstract class ActiveRecord implements ActiveRecordInterface
 {
@@ -27,6 +25,7 @@ abstract class ActiveRecord implements ActiveRecordInterface
         }
     }
 
+    //função para pegar a tabela quando é chamado o model
     public function getTable()
     {
         return $this->table;

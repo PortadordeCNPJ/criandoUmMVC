@@ -16,3 +16,5 @@ os métodos que esse controller possuí e os parametros caso sejam necessários 
 
 7- Dentro da pasta "models", possuí a pasta "activerecord", os arquivos dentro dela são usados para fazer a conexão com o banco de dados, criação de querys e de métodos que
 podem receber as tabelas de um banco de dados.
+
+8- A pasta "views", dentro das views são onde são carregadas as páginas que o usuário consegue ver.
