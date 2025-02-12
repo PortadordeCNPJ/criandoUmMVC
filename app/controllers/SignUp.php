@@ -2,15 +2,21 @@
 
 namespace app\controllers;
 
-use app\classes\Flash;
 use app\models\User;
+use app\classes\Flash;
 use app\classes\Validate;
+use app\classes\BlockNotLogged;
 use app\models\activerecord\Insert;
+use app\interfaces\ControllerInterface;
 
-class SignUp
-{
+class SignUp implements ControllerInterface {
     public $view;
     public array $data = [];
+
+    public function __construct()
+    {
+        BlockNotLogged::block($this, ['']);
+    }
 
     public function index(array $args)
     {
@@ -45,5 +51,22 @@ class SignUp
             Flash::set('created','Cadastrado com sucesso', 'success');
             return redirect('/signup');
         }
+    }
+    public function destroy(array $args)
+    {
+
+    }
+
+    public function edit(array $args)
+    {
+
+    }
+    public function show(array $args)
+    {
+        
+    }
+    public function update(array $args)
+    {
+        
     }
 }

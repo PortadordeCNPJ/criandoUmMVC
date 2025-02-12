@@ -10,6 +10,12 @@ class Validate
     public bool $erros = false;
     public array $data = [];
 
+    /**
+     * Summary of validateInstance
+     * @param string $field
+     * @param array $validations
+     * @return void
+     */
     private function validateInstance(string $field, array $validations)
     {
         foreach ($validations as $classValidate) {

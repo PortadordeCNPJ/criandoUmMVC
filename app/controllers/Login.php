@@ -31,7 +31,7 @@ class Login implements ControllerInterface
     public function store()
     {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
         $user = new User;
         $userFound = $user->execute(new FindBY(field: 'email', value: $email, fields: 'firstName, lastName, password'));

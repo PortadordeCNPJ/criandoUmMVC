@@ -5,6 +5,8 @@ namespace app\classes;
 
 class BlockPostRequest
 {
+    //Bloqueia métodos do tipo POST
+    
     public static function block()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

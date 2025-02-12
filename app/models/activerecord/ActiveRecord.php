@@ -7,6 +7,7 @@ use app\interfaces\ActiveRecordInterface;
 use app\interfaces\ActiveRecordExecuteInterface;
 
 //Não é possível instanciar essa classe em lugar nenhum, pois ela é abstrata
+
 abstract class ActiveRecord implements ActiveRecordInterface
 {
     //tabela que será enviada de dentro das classes dos Models
