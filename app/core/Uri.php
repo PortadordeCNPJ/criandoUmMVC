@@ -11,4 +11,11 @@ class Uri
 
         return explode("/", ltrim($uri, '/'));
     }
+
+    //Verifica se existe algo no indice especifico e retorna ele.
+    public static function uriExist($uri, $index){
+        if (isset($uri[$index]) and $uri[$index] !== ''){
+            return $uri[$index];
+        }
+    }
 }

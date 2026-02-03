@@ -21,6 +21,6 @@
         }
     ],
     "require": {
-        "filp/whoops": "^2.16"
+        "filp/whoops": "^2.18"
     }
 }

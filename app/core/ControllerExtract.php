@@ -2,28 +2,37 @@
 
 namespace app\core;
 
+use Throwable;
+
 class ControllerExtract
 {
-    public static function extract() 
+    public static function extract()
     {
         $uri = Uri::uri();
 
-        $controller = "Home";
+        $folder = FolderExtract::extract();
 
-        $folderExist = FolderExtract::extract();
-        var_dump($folderExist);
-        die();
-
-        if (isset($uri[0]) and $uri[0] !== '') {
-            $controller = ucfirst($uri[0]);
+        //Verificação para saber se o controller está no indice [1].
+        if ($folder) {
+            //Se a pasta existir, vai pegar a partir do indice 1, se não vai pegar o 0.
+            $controller = Uri::uriExist($uri, 1);
+            $namespaceAndController = "app\\controllers\\".$folder."\\";
+        } else {
+            $controller = Uri::uriExist($uri, 0);
+            $namespaceAndController = "app\\controllers\\";
         }
 
-        $namespaceAndController = "app\\controllers\\" . $controller;
 
-        if (class_exists($namespaceAndController)) {
-            $controller = $namespaceAndController;
+        if (!$controller) {
+            $controller = CONTROLLER_DEFAULT;
         }
 
-        return $controller;
+        $controller = $namespaceAndController.$controller;
+
+        if (class_exists($controller)) {
+            return $controller;
+        }
+        throw new \Exception("Controller {$controller} não existe");
+
     }
 }
