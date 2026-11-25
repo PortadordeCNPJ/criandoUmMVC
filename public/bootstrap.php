@@ -7,6 +7,7 @@ require "../vendor/autoload.php";
 //$whoops é uma biblioteca para mostrar os erros com mais detalhes
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();   
 $whoops->allowQuit(false);
 $whoops->writeToOutput(false);
 
