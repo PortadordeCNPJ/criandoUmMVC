@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d78c74e2fce5fef5aa7e84f13b1b8606",
+    "content-hash": "db4644eb9e8da51e65508df7c5bc0248",
     "packages": [
         {
             "name": "filp/whoops",
@@ -126,7 +126,8 @@
             "support": {
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
-            "time": "2024-09-11T13:17:53+00:00"
+            "time": "2024-09-11T13:17:53+00:00",
+            "published-time": "2024-09-11T13:21:14+00:00"
         }
     ],
     "packages-dev": [],

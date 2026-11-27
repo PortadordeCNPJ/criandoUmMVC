@@ -6,12 +6,12 @@ use Throwable;
 
 class ControllerExtract
 {
-    public static function extract()
+    public static function extract( ):string
     {
         $uri = Uri::uri();
 
-        $folder = FolderExtract::extract();
-
+        $folder = FolderExtract::extract($uri);
+        
         //Verificação para saber se o controller está no indice [1].
         if ($folder) {
             //Se a pasta existir, vai pegar a partir do indice 1, se não vai pegar o 0.
@@ -21,7 +21,6 @@ class ControllerExtract
             $controller = Uri::uriExist($uri, 0);
             $namespaceAndController = "app\\controllers\\";
         }
-
 
         if (!$controller) {
             $controller = CONTROLLER_DEFAULT;

@@ -4,15 +4,15 @@ namespace app\core;
 
 class FolderExtract
 {
-    public static function extract()
+    public static function extract($uri)
     {
-        $uri = Uri::uri();
 
-        $folder = '';
+        $folder = CONTROLLER_FOLDER_DEFAULT;
 
-        if (isset($uri[0]) and $uri !== "") {
-            return is_dir(strtolower(ROOT.'/'.CONTROLLER_PATH.$uri[0])) ? $uri[0] : 'teste';
+        if (isset($uri[0]) and $uri[0] !== '') {
+            return is_dir(strtolower(ROOT.'/'.CONTROLLER_PATH.$uri[0])) ? $uri[0] : '';
         }
+
         return $folder;
     }
 }
